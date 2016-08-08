@@ -11,7 +11,7 @@ var config = {
   username: process.env.DB2I_USERNAME,
   password: process.env.DB2I_PASSWORD,
   hostname: process.env.DB2I_HOSTNAME || 'localhost',
-  port: process.env.DB2_PORTNUM || 60000,
+  port: process.env.DB2I_PORTNUM || 60000,
   database: process.env.DB2I_DATABASE || 'testdb',
   schema: process.env.DB2I_SCHEMA || 'STRONGLOOP',
 };
