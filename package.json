@@ -1,5 +1,5 @@
 {
-  "name": "loopback-connector-db2i",
+  "name": "loopback-connector-db2iseries",
   "version": "1.0.0",
   "description": "LoopBack Connector for IBM DB2 iSeries",
   "keywords": [
@@ -36,11 +36,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-connector-db2i.git"
+    "url": "git://github.com/strongloop/loopback-connector-db2iseries.git"
   },
-  "homepage": "https://github.com/strongloop/loopback-connector-db2i",
+  "homepage": "https://github.com/strongloop/loopback-connector-db2iseries",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-db2i/issues"
+    "url": "https://github.com/strongloop/loopback-connector-db2iseries/issues"
   },
   "license": "Artistic-2.0"
 }

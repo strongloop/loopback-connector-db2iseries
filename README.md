@@ -1,7 +1,7 @@
-#loopback-connector-db2i
+#loopback-connector-db2iseries
 
 [IBM® DB2® for iSeries](http://www-03.ibm.com/systems/power/software/i/db2/) is the database of choice for robust, enterprise-wide solutions handling high-volume workloads.
-It is optimized to deliver industry-leading performance while lowering costs.  The `loopback-connector-db2i`
+It is optimized to deliver industry-leading performance while lowering costs.  The `loopback-connector-db2iseries`
 module is the LoopBack connector for DB2 for iSeries.
 
 The LoopBack DB2 for iSeries connector supports:
@@ -14,7 +14,7 @@ The LoopBack DB2 for iSeries connector supports:
 Enter the following in the top-level directory of your LoopBack application:
 
 ```
-$ npm install loopback-connector-db2i --save
+$ npm install loopback-connector-db2iseries --save
 ```
 
 The `--save` option adds the dependency to the application's `package.json` file.
@@ -27,7 +27,7 @@ The entry in the application's `server/datasources.json` will look something lik
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i"
+  "connector": "db2iseries"
 }
 ```
 
@@ -36,7 +36,7 @@ Edit `server/datasources.json` to add other supported properties as required:
 ```
 "mydb": {
   "name": "mydb",
-  "connector": "db2i",
+  "connector": "db2iseries",
   "username": <username>,
   "password": <password>,
   "database": <database name>,
@@ -64,7 +64,7 @@ For example:
 
 ```
 var DataSource = require('loopback-datasource-juggler').DataSource;
-var DB2 = require('loopback-connector-db2i');
+var DB2 = require('loopback-connector-db2iseries');
 
 var config = {
   username: process.env.DB2_USERNAME,
