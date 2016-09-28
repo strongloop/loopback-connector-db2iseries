@@ -3,6 +3,8 @@
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
+'use strict';
+
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
 
@@ -22,7 +24,6 @@ describe('transactions', function() {
 
   describe('commit and rollback', function() {
     before(function(done) {
-
       db = global.getDataSource();
 
       Post = db.define('PostTX', {
@@ -67,7 +68,7 @@ describe('transactions', function() {
           function(err, posts) {
             if (err) {
               if (err.message.includes('SQL0913N')) {
-                console.log("W: Differs from LUW results");
+                console.log('W: Differs from LUW results');
                 return done();
               } else {
                 return done(err);
@@ -80,7 +81,6 @@ describe('transactions', function() {
     }
 
     describe('commit', function() {
-
       var post = {title: 't1', content: 'c1'};
       before(createPostInTx(post));
 
@@ -98,7 +98,6 @@ describe('transactions', function() {
     });
 
     describe('rollback', function() {
-
       var post = {title: 't2', content: 'c2'};
       before(createPostInTx(post));
 
