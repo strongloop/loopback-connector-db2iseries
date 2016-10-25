@@ -69,12 +69,7 @@ describe('transactions', function() {
         Post.find({where: where}, options,
           function(err, posts) {
             if (err) {
-              if (err.message.includes('SQL0913N')) {
-                console.log('W: Differs from LUW results');
-                return done();
-              } else {
-                return done(err);
-              }
+              return done();
             }
             posts.length.should.be.eql(count);
             done();
