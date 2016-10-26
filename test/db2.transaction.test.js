@@ -68,10 +68,9 @@ describe('transactions', function() {
         }
         Post.find({where: where}, options,
           function(err, posts) {
-            if (err) {
-              return done();
-            }
-            posts.length.should.be.eql(count);
+            if (err) return done();
+
+            posts.length.should.equal(count);
             done();
           });
       };
