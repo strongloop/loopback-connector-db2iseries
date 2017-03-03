@@ -5,6 +5,7 @@
 
 'use strict';
 
+var g = require('../lib/globalize');
 var DataSource = require('loopback-datasource-juggler').DataSource;
 var DB2 = require('../'); // loopback-connector-db2i
 
@@ -39,6 +40,6 @@ db.autoupdate('User', function(err) {
   });
 
   User.destroyAll(function() {
-    console.log('example complete');
+    g.log('example complete');
   });
 });
