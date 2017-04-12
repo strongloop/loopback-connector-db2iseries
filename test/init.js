@@ -15,7 +15,6 @@ var config = {
   hostname: process.env.DB2I_HOSTNAME || 'localhost',
   port: process.env.DB2I_PORTNUM || 60000,
   database: process.env.DB2I_DATABASE || 'testdb',
-  schema: process.env.DB2I_SCHEMA || 'STRONGLOOP',
 };
 
 global.config = config;
@@ -23,6 +22,11 @@ global.config = config;
 global.getDataSource = global.getSchema = function(options) {
   var db = new DataSource(require('../'), config);
   return db;
+};
+
+global.connectorCapabilities = {
+  ilike: false,
+  nilike: false,
 };
 
 global.sinon = require('sinon');
