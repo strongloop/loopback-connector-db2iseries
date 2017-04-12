@@ -18,12 +18,6 @@ var Transaction = require('loopback-connector').Transaction;
 var db, Post;
 
 describe('transactions', function() {
-  before(function() {
-    if (global.config.supportDB2z) {
-      this.skip();
-    }
-  });
-
   describe('commit and rollback', function() {
     before(function(done) {
       db = global.getDataSource();
